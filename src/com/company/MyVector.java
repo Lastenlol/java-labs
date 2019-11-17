@@ -100,7 +100,7 @@ public class MyVector<T> {
         if (size <= capacity) return;
 
         capacity = getDesiredCapacity();
-        T[] newItems = (T[]) Array.newInstance(items.getClass().getComponentType(), capacity);
+        T[] newItems = (T[]) new Object[capacity];
 
         System.arraycopy(items, 0, newItems, 0, items.length);
         items = newItems;
