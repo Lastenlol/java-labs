@@ -1,7 +1,5 @@
 package com.company;
 
-import java.lang.reflect.Array;
-
 public class MyVector<T> {
 
     private T[] items;

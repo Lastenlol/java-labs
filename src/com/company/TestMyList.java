@@ -1,8 +1,8 @@
 package com.company;
 
-public class TestMyList extends Test {
+public class TestMyList {
 
-    public static void runTests() {
+    public static void main(String[] args) {
         MyList<Integer> list = new MyList<>();
 
         list.add(1);
@@ -22,6 +22,14 @@ public class TestMyList extends Test {
 
         list.clear();
         check(list.toString().equals(""));
+    }
+
+    protected static void check(boolean statement) {
+        check(statement, "");
+    }
+
+    protected static void check(boolean statement, String message) {
+        if (!statement) throw new AssertionError(message);
     }
 
 }

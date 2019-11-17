@@ -1,8 +1,8 @@
 package com.company;
 
-public class TestMyVector extends Test {
+public class TestMyVector {
 
-    public static void runTests() {
+    public static void main(String[] args) {
         MyVector<Integer> list = new MyVector<>();
 
         check(list.size() == 0);
@@ -57,6 +57,14 @@ public class TestMyVector extends Test {
         check(list.size() == 0);
         check(list.capacity() == 32);
         check(list.toString().equals(""));
+    }
+
+    protected static void check(boolean statement) {
+        check(statement, "");
+    }
+
+    protected static void check(boolean statement, String message) {
+        if (!statement) throw new AssertionError(message);
     }
 
 }
