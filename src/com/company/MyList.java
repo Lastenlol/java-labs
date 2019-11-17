@@ -71,14 +71,14 @@ public class MyList<T> {
 
     // удаляет из начала
     public T shift() {
-        if (size == 0) throw new IndexOutOfBoundsException();
-
         return remove(head.data);
     }
 
     // удаляет по значению
     public T remove(T data) {
-        Node current = new Node(null, head);
+        if (size == 0) throw new IndexOutOfBoundsException();
+
+        Node current = head;
 
         while (current.next != null && current.next.data != data) {
             current = current.next;
