@@ -70,12 +70,12 @@ public class MyList<T> {
     }
 
     // удаляет из начала
-    public T shift() {
-        return remove(head.data);
+    public void shift() {
+        remove(head.data);
     }
 
     // удаляет по значению
-    public T remove(T data) {
+    public void remove(T data) {
         if (size == 0) throw new IndexOutOfBoundsException();
 
         Node current = new Node(null, head);
@@ -98,8 +98,6 @@ public class MyList<T> {
         }
 
         --size;
-
-        return removingNode.data;
     }
 
     public void clear() {

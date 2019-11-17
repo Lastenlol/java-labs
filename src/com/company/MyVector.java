@@ -13,7 +13,6 @@ public class MyVector<T> {
 
         this.size = size;
         this.capacity = this.getDesiredCapacity();
-
         this.items = (T[]) new Object[this.capacity];
     }
 
@@ -51,7 +50,7 @@ public class MyVector<T> {
     public void pop() {
         if (size == 0) throw new IndexOutOfBoundsException();
 
-        items[size--] = null;
+        items[--size] = null;
     }
 
     public void remove(int index) {
