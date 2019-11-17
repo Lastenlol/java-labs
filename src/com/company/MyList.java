@@ -78,7 +78,7 @@ public class MyList<T> {
     public T remove(T data) {
         if (size == 0) throw new IndexOutOfBoundsException();
 
-        Node current = head;
+        Node current = new Node(null, head);
 
         while (current.next != null && current.next.data != data) {
             current = current.next;
