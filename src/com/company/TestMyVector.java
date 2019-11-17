@@ -31,10 +31,15 @@ public class TestMyVector extends Test {
         check(list.capacity() == 10);
 
         list.push(9);
+
+        check(list.size() == 11);
+        check(list.capacity() == 32);
+
         list.push(10);
 
         check(list.size() == 12);
         check(list.capacity() == 32);
+        check(list.toString().equals("0, 1, 15, 2, 3, 4, 5, 6, 7, 8, 9, 10"));
 
         list.pop();
         check(list.size() == 11);
