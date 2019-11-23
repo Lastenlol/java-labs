@@ -1,6 +1,5 @@
 package com.company;
 
-import java.util.Collections;
 import java.util.Comparator;
 
 public class SimpleSort {
@@ -94,7 +93,7 @@ public class SimpleSort {
         for (int i = from; i < to - 1; i++) {
             int iMin = i;
 
-            for (int j = i + 1; j < to - from; j++) {
+            for (int j = i + 1; j < to; j++) {
                 if (comparator.compare(arr[j], arr[iMin]) < 0) {
                     iMin = j;
                 }
