@@ -73,6 +73,17 @@ public class BinaryTree<T extends Comparable> {
         size++;
     }
 
+    private int countLeafs(Node from) {
+        if (from == null) return 0;
+        if (from.left == null && from.right == null) return 1;
+
+        return countLeafs(from.left) + countLeafs(from.right);
+    }
+
+    public int countLeafs() {
+        return countLeafs(root);
+    }
+
     public void clear() {
         this.root = null;
         this.size = 0;

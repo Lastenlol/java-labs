@@ -23,8 +23,6 @@ public class SimpleSort {
     public static <T> void bubble(T[] arr, Comparator<T> comparator, int from, int to) throws IndexOutOfBoundsException {
         if (to < from) throw new IndexOutOfBoundsException();
 
-        int length = to - from;
-
         for (int i = from; i < to; i++) {
             for (int j = from; j < to + from - i - 1; j++) {
                 if (comparator.compare(arr[j], arr[j + 1]) > 0) {
